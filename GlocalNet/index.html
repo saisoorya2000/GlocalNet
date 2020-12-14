@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GlocalNet: Class-aware Long-term Human Motion Synthesis</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<main role="main" id="main", class="container">
+    <br/>
+    <div class="jumbotron">
+        <h1>GlocalNet: Class-aware Long-term Human Motion Synthesis</h1>
+        <br>
+        <!-- <p class="lead">GlocalNet Model</p> -->
+        <a href="https://neerajbattan.github.io/" target="_blank">Neeraj Battan</a>*,
+        <a href="https://yudhik11.github.io/" target="_blank">Yudhik Agrawal</a>*,
+        <!-- <a href="http://virtualhumans.mpi-inf.mpg.de" target="_blank">Gerard Pons-Moll</a><br> -->
+        <a>Sai Soorya Rao Veeravalli</a>,
+        <a>Aman Goel</a>,
+        <a href="https://sites.google.com/site/asharmaresearch/" target="_blank">Avinash Sharma</a><br>
+        <br>
+	<a href="http://cvit.iiit.ac.in/" target="_blank">CVIT Lab</a>,<br>
+        <a href="https://www.iiit.ac.in/" target="_blank">International Institute of Information Technology, Hyderabad</a>
+        <br><br>
+	<a href="http://wacv2021.thecvf.com/home" target="_blank">WACV 2021</a>, Waikoloa, Hawaii, USA <br>
+    <!-- (<strong style="color: red;">Oral</strong>) -->
+        <!--a href="https://arxiv.org/abs/2003.04583" target="_blank">{Arxiv}</a-->
+        <!--a href="http://virtualhumans.mpi-inf.mpg.de/papers/patel20tailornet/patel20tailornet_suppl.pdf" target="_blank">{Supplementary}</a-->
+        <!--a href="http://virtualhumans.mpi-inf.mpg.de/papers/patel20tailornet/patel20tailornet_video.mp4" target="_blank">{Video}</a-->
+    </div>
+
+
+    <div class="row justify-content-center">
+        <!-- <div class="column">
+            <p class="mb-5"><a class="btn btn-large btn-light" href='https://arxiv.org/abs/2003.04583' target="_blank">ArXiv</a></p>
+	</div> -->
+        <div class="column">
+            <p class="mb-5"><a class="btn btn-large btn-light" href='wacv_2021.pdf' target="">Paper</a></p>
+	</div>
+        <div class="column">
+            <p class="mb-5"><a class="btn btn-large btn-light" href='wacv_2021_supplementary.pdf' target="">Supplementary</a></p>
+	</div>
+        <!-- <div class="column">
+            <p class="mb-5"><a class="btn btn-large btn-light" href='https://github.com/chaitanya100100/TailorNet' target="_blank">Code</a></p>
+	</div>
+        <div class="column">
+            <p class="mb-5"><a class="btn btn-large btn-light" href='https://github.com/zycliao/TailorNet_dataset' target="_blank">Data</a></p>
+	</div>  -->
+        <!-- <div class="column">
+            <p class="mb-5"><a class="btn btn-large btn-light" href='' target="">Video</a></p>
+        </div> -->
+    </div>
+
+
+
+    <div class="row mb-5 mt-3"> <div class="col-md-12"><img src="imgs/multiple_actions_parallel.png" style="max-height:100%;max-width:100%;" class="img-responsive"></div> </div>
+    <div style="font-size:16px;">
+        <img src="imgs/main_diagram.png" alt="image" style="max-height:80%;max-width:96.5%;border:5px solid black;">
+        <br>
+        <br>
+        Using the same set of sparse initial poses, our method can generate differents type of activities based on the input class label. 
+        <br>
+        The figure depicts two such
+        activities - Drinking and Standing up that were synthesized from the same set of initial poses.
+        <br>
+        <!-- <br> -->
+        <!-- <br> -->
+        <!-- <img src="imgs/sequence_of_activities.png" alt="image" style="max-height:90%;max-width:96.5%;border:5px solid black;">
+        <br>
+        <br>
+        Our method is also capable of transitioning across actions. Figure demonstrates the transition from Standing Up to Drinking activity.
+        <br>
+        <br> -->
+    </div>
+    <br>
+    <br>
+    <img src="imgs/synthesized_poses.gif" alt="image" style="width:100%;max-width:100%;">
+    <br>
+    <br>
+    <br>
+    <div class="row mb-5 mt-3"> <div class="col-md-12" style="font-size:18px;"><img src="imgs/embedding-diagram.png" width="100%" class="img-responsive">
+        <br>
+        <br>
+        T-SNE plot of GloGen embedding subspace along with the plot of selected motion trajectories where multiple samples for different classes are represented as color-coded 3D points.
+        </div> 
+    </div>
+    <br>
+    <div style="font-size:16px;">
+        <img src="imgs/sequence_of_activities.png" alt="image" style="max-height:90%;max-width:100%;border:5px solid black;">
+        <br>
+        <br>
+        Our method is also capable of transitioning across actions. Figure demonstrates the transition from Standing Up to Drinking activity.
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div>
+	    <img src="imgs/sequence_of_activities.gif" alt="image" style="height:100%;max-width:49.5%;">
+	    <img src="imgs/cmu_data.gif" alt="image" style="height:100%;max-width:49.5%;">
+    </div>
+    <br>
+    <br>
+
+
+
+        <h2>Abstract</h2>
+        <br>
+        <p class="mb-5">
+            Synthesis of long-term human motion skeleton sequences
+            is essential to aid human-centric video generation with
+            potential applications in Augmented Reality, 3D character
+            animations, pedestrian trajectory prediction, etc. Long term human motion synthesis is a challenging task due
+            to multiple factors like, long-term temporal dependencies
+            among poses, cyclic repetition across poses, bi-directional
+            and multi-scale dependencies among poses, variable speed
+            of actions, and a large as well as partially overlapping space of temporal pose variations across multiple
+            class/types of human activities. This paper aims to address
+            these challenges to synthesize a long-term (> 6000 ms) human motion trajectory across a large variety of human activity classes (> 50). We propose a two-stage activity generation method to achieve this goal, where the first stage
+            deals with learning the long-term global pose dependencies in activity sequences by learning to synthesize a sparse
+            motion trajectory while the second stage addresses the generation of dense motion trajectories taking the output of the
+            first stage. We demonstrate the superiority of the proposed
+            method over SOTA methods using various quantitative evaluation metrics on publicly available datasets.
+    </p>
+    <video width="784" height="441" style="display:block;margin:auto;" frameborder="0" controls>
+        <source src="1267_glocalnet.mp4" type="video/mp4">
+        <source src="thumbnail.png" type="video/png">
+        Your browser does not support HTML video.
+      </video>
+	<!-- <iframe width="784" height="441" style="display:block;margin:auto;" src="https://www.youtube.com/embed/F0O21a_fsBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+	<br/> 
+	<br/>
+	<!--iframe width="560" height="315" src="https://www.youtube.com/embed/F0O21a_fsBQ?start=10&end=30&mute=1&autoplay=1&showinfo=0&controls=0&loop=1" frameborder="0" allowfullscreen></iframe-->
+	<!--iframe width="560" height="315" src="https://www.youtube.com/embed/rD23UGl6L5Q?controls=0&autoplay=1&showinfo=0&loop=1&playlist=rD23UGl6L5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
+    
+    <h2>Citation</h2>
+    <pre class="bg-light" style="padding: 5px 10.5px;">@inproceedings{ ,
+        title = {GlocalNet: Class-aware Long-term Human Motion Synthesis},<!-- author = {Neeraj Battan ∗ , Yudhik Agrawal ∗ , Sai Soorya Rao, Aman Goel, and Avinash Sharma }, -->
+        author = { },<!-- booktitle = {{IEEE Workshop} Winter Conference of Applications on Computer Vision  (WACV)}, -->
+        booktitle = {{ } Winter Conference of Applications on Computer Vision  (WACV)},
+        month = {jan},
+        organization = {{ }},
+        year = {2021},
+    }</pre>
+</main>
+
+
+<!-- <footer class="mt-5 pt-2 pb-3 border-top text-center text-muted">
+    <a href="//virtualhumans.mpi-inf.mpg.de/contact.html" class="text-muted small">Contact</a> •
+    <a href="//imprint.mpi-klsb.mpg.de/inf/virtualhumans.mpi-inf.mpg.de" class="text-muted small">Imprint/ Impressum</a> •
+    <a href="//data-protection.mpi-klsb.mpg.de/inf/virtualhumans.mpi-inf.mpg.de" class="text-muted small">Data Protection / Datenschutzhinweis</a>
+</footer> -->
+
+</body>
+</html>
