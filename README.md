@@ -9,5 +9,11 @@ May 2021: WACV 2021
 
 ### Citation
 ```
-Coming Soon
+@inproceedings{battan2020glocalnet,
+  title={GlocalNet: Class-aware Long-term Human Motion Synthesis},
+  author={Battan, Neeraj and Agrawal, Yudhik and Rao, Sai Soorya and Goel, Aman and Sharma, Avinash},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={879--888},
+  year={2020}
+}
 ```
