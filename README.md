@@ -1,9 +1,9 @@
 # GlocalNet: Class-aware Long-term Human Motion Synthesis
 <b>Neeraj Battan*, Yudhik Agrawal*</b>, Sai Soorya Rao, Aman Goel, and Avinash Sharma
 
-May 2021: WACV 2021
+January 2021: WACV 2021
 
-[ArXiv Link](Coming Soon)
+[ArXiv Link](https://arxiv.org/abs/2012.10744)
 
 [Project Page](https://saisoorya2000.github.io/GlocalNet/)
 
